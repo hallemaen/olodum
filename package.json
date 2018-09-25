@@ -9,9 +9,7 @@
   },
   "preferGlobal": true,
   "dependencies": {
-    "ndns": "git://github.com/stefounet/ndns.git",
     "optimist": "",
-    "growl": "",
     "dnsd":"^0.9.5"
   },
   "devDependencies": {
