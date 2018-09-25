@@ -1,14 +1,15 @@
 #!/usr/bin/env node
 var argv = require('optimist')
-      .usage('sudo olodum [domain1] [domain2] [-t target] [-d]')
+      .usage('sudo olodum [domain1] [domain2] [-t target] [-l listen] [-d]')
       .default('t','127.0.0.1')
       .argv
     , domains = argv._
     , target = argv.t
+    , listen = argv.l
     , debug = argv.d;
 
 var olodum = require('../lib/olodum');
 
 domains = (domains.length === 0) ? [''] : domains;
 
-olodum.init(domains, target, debug);
+olodum.init(domains, target, listen, debug);
